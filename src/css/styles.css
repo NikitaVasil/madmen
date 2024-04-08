@@ -3,6 +3,7 @@
 @import url('/src/css/variables.css');
 
 a {
+    color: currentColor;
     text-decoration: none;
 }
 
@@ -27,4 +28,46 @@ body {
     max-width: var(--container-width);
     margin: 0 auto;
     position: relative;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.header {
+  padding-top: 25px;
+  padding-inline: 50px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  column-gap: 35px;
+}
+
+.header__telephone {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.visible-mobile{
+  display: none;
 }
