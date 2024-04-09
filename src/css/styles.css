@@ -45,7 +45,9 @@ body {
 
 .header {
   padding-top: 25px;
-  padding-inline: 50px;
+  padding-bottom: 130px;
+  padding-inline: 80px;
+  background: url('/src/assets/image/header-bg.svg') center/cover no-repeat;
 }
 
 .header__inner {
@@ -61,13 +63,83 @@ body {
   column-gap: 35px;
 }
 
+.header__menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+}
+
+.header__menu-link::after {
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition-duration: 0.2s;
+}
+
 .header__telephone {
+  padding-left: 30px;
   display: flex;
   justify-content: end;
   align-items: center;
   column-gap: 10px;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  height: 43px;
+  padding-inline: 26px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--color-button-bg);
+  border: none;
+  border-radius: 50px;
+}
+
+.button-transparent {
+  background: transparent;
+  border: 1px solid var(--color-black);
+}
+
+
 .visible-mobile{
   display: none;
+}
+
+
+@media (max-width: 1440px) {
+  .header__telephone {
+    padding-left: 10px;
+  }
+}
+
+@media (hover:hover){
+  .header__menu-link:hover::after {
+    width: 100%;
+  }
+
+  .button-transparent:hover {
+    background: var(--color-button-bg);
+    color: var(--color-white);
+    border: 1px solid var(--color-button-bg);
+  }
+}
+
+@media (hover:none){
+  .button-transparent:active {
+    background: var(--color-button-bg);
+    color: var(--color-white);
+    border: 1px solid var(--color-button-bg);
+  }
 }
