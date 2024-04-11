@@ -1,0 +1,21 @@
+:root {
+  --font-family: "PT Sans", sans-serif;
+  --font-family-placeholder: "Open Sans", sans-serif;
+  --font-family-number: "Roboto", sans-serif;
+  --font-size-base: 18px;
+  --line-height-base: 1.76;
+
+	--color-white: #fff;
+	--color-black: #000;
+  --color-button-bg: #d7221b;
+  --color-block-bg: #f5f9fb;
+  --color-text-selection: #d9241d;
+  --color-gray-text: #4e4e4e;
+
+  --box-shadow: 0 0 100px 0 #f5f9fb;
+
+  --container-width: 1464px;
+  
+  --padding-small: 35px;
+  --padding-large: 50px;
+}
